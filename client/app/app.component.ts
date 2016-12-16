@@ -8,6 +8,14 @@ import { Http } from '@angular/http';
 })
 
 export class AppComponent {
-	constructor(http:Http) {
+	fotos: Object[] = [];
+
+	constructor(http: Http) {
+		http
+		.get('v1/fotos')
+		.map(res => res.json())
+		.subscribe(fotos => {
+			this.fotos = fotos;
+		}, erro => console.error(erro));
 	}
 }
