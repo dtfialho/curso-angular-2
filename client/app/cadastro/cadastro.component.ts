@@ -15,7 +15,7 @@ export class CadastroComponent {
 	service: FotoService;
 
 	constructor(service: FotoService, fb: FormBuilder) {
-		service: FotoService = service;
+		this.service = service;
 
 		this.meuForm = fb.group({
 			titulo: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
