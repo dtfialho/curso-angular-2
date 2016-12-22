@@ -28,7 +28,7 @@
 				<textarea formControlName="descricao" name="descricao" [(ngModel)]="foto.descricao" class="form-control" autocomplete="off"></textarea>
 			</div>
 
-			<button class="btn btn-primary" type="submit" [disabled]="meuForm.invalid">Salvar</button>
+			<botao nome="Salvar" estilo="btn-primary" tipo="submit" [desabilitado]="meuForm.invalid"></botao>
 			<a [routerLink]="['']" class="btn btn-primary">Voltar</a>
 		</div>
 		<div class="col-md-6">

@@ -42,8 +42,8 @@ export class CadastroComponent {
 
 		this.service.cadastra(this.foto).subscribe(res => {
 			this.foto = new FotoComponent();
-			this.mensagem = res.getMensagem();
-			if(!res.getInclusao()) this.router.navigate(['']);
+			this.mensagem = res.mensagem;
+			if(!res.inclusao) this.router.navigate(['']);
 		}, erro => console.error(erro));
 	}
 }
